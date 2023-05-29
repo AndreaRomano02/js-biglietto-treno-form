@@ -29,28 +29,55 @@ generateBtn.addEventListener("click", function () {
   let userName = inputName.value;
   let userKm = parseInt(inputKm.value);
 
-  //# Calcolo della tariffa base
-  let basePriceKm = userKm * priceForKm;
-  let finalPrice;
+  //! VALIDAZIONE
+  //* Validation var
+  let valid = true;
 
-  //# Controllo l'età ed applico lo sconto
-  if (inputAge.value === "minorenne") {
-    finalPrice = (basePriceKm * discountMinor).toFixed(2);
-  } else if (inputAge.value === "over 65") {
-    finalPrice = (basePriceKm * discountOver).toFixed(2);
+  //* Error message
+  let errorMessage;
+
+  //* Controlli di validazione
+  //*-----------------------------------------------
+  if (!isNaN(userName)) {
+    valid = false;
+    errorMessage = "Campi inseriti non validi. Prova ad inserire dei numeri \n";
   }
+  //*-----------------------------------------------
 
-  //# Arrotondo a due decimali massimi
-  basePriceKm = basePriceKm.toFixed(2);
+  //* Controlli di validazione
+  //*-----------------------------------------------
+  if (userKm < 0) {
+    valid = false;
+    errorMessage += 'I campi devono essere validi "Numeri positivi"';
+  }
+  //*-----------------------------------------------
 
-  //# Stampo in pagina
-  pageName.innerText = userName;
-  pageKm.innerText = userKm + "Km";
-  pageAge.innerText = inputAge.value;
-  pageBasePrice.innerText = basePriceKm;
-  if (!finalPrice) {
-    pageFinalPrice.innerText = basePriceKm;
+  if (!valid) {
+    alert(errorMessage);
   } else {
-    pageFinalPrice.innerText = finalPrice;
+    //# Calcolo della tariffa base
+    let basePriceKm = userKm * priceForKm;
+    let finalPrice;
+
+    //# Controllo l'età ed applico lo sconto
+    if (inputAge.value === "minorenne") {
+      finalPrice = (basePriceKm * discountMinor).toFixed(2);
+    } else if (inputAge.value === "over 65") {
+      finalPrice = (basePriceKm * discountOver).toFixed(2);
+    }
+
+    //# Arrotondo a due decimali massimi
+    basePriceKm = basePriceKm.toFixed(2);
+
+    //# Stampo in pagina
+    pageName.innerText = userName;
+    pageKm.innerText = userKm + "Km";
+    pageAge.innerText = inputAge.value;
+    pageBasePrice.innerText = basePriceKm;
+    if (!finalPrice) {
+      pageFinalPrice.innerText = basePriceKm;
+    } else {
+      pageFinalPrice.innerText = finalPrice;
+    }
   }
 });
