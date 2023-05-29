@@ -19,7 +19,8 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
 ## Steps
 
 <br>
-
+- Creo l'HTML con gli appositi input.
+- Prendo tutti gli elementi necessari dal DOM.
 - Dichiaro la variabile del prezzo base del biglietto e degli sconti.
 - Chiedo all'utente di inserire quanti Km vuole percorrere e quanti anni ha.
 - Moltiplico i Km detti dall'utente alla tariffa base e sistemo il prezzo con due decimali.
@@ -31,24 +32,14 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
 ## Bonus
 
 ```
-Stampare il prezzo finale sulla pagina invece che in console.
+Randomizzare un numero per la carrozza dell'utente
 
-Aggiungere, sempre in pagina, altre informazioni, come il prezzo prima dello sconto, l'età e il chilometraggio indicati dall'utente.
+Randomizzare un numero per il codice del biglietto
+
+Utilizzare una <select> invece di un <input> per determinare l'età dell'utente
 
 Validazione.
 
 Abbellimenti vari con CSS.
 
 ```
-
-## Steps bonus
-
-<br>
-
-- Prendo tutti gli elementi del DOM che mi servono.
-- Inserire il prezzo precedente nell'elemtno allo sconto.
-- Inserire il prezzo finale nell'elemento apposito preso in precedenza.
-- Inserire dati dell'utente nell'elemtno del DOM.
-- Rendere tutto più carino con CSS.
-
----
