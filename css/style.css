@@ -1,0 +1,20 @@
+main{
+  height: 100vh;
+}
+body{
+  background-image: url(../train.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.card{
+  border-radius: 50px;
+}
+.card:hover{
+  box-shadow: 8px 10px 10px rgb(255, 55, 0);
+  cursor: pointer;
+}
+
+.card:active{
+  transform: translate(10px, 10px) scale(0.97);
+  box-shadow: none;
+}
