@@ -95,7 +95,7 @@ generateBtn.addEventListener("click", function () {
     basePriceKm = basePriceKm.toFixed(2);
 
     //# Stampo in pagina
-    pageName.innerText = userName;
+    pageName.innerText = userName.toUpperCase();
 
     pageKm.innerText = userKm + "Km";
 
