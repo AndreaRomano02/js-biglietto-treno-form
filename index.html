@@ -18,10 +18,33 @@
 
 <body>
 
-  <main class="container d-flex align-items-center justify-content-center">
-    <div class="card p-5 bg-danger text-white fs-3 w-75">
-      <p>Hai deciso di percorrere <strong id="user-km"></strong></p>
-      <p>La tua età è pari a <strong id="user-age"></strong></p>
+  <main class="m-5">
+    <div>
+      <label for="user-name" class="d-block">Inserisci qua il tuo nome</label>
+      <input id="user-name" type="text" value="Andrea">
+    </div>
+    <div>
+      <label for="user-km" class="d-block mt-3">Quanti chilometri vuoi percorrere?</label>
+      <input id="user-km" type="number" value="20">
+    </div>
+    <div>
+      <label for="user-age" class="d-block mt-3">In che fascia di età sei?</label>
+      <select name="age" id="user-age">
+        <option id="minor" value="adulto">Adulto</option>
+        <option id="adult" value="minorenne">Minorenne</option>
+        <option id="over" value="over 65">Over 65</option>
+      </select>
+    </div>
+    <div class="mt-3">
+      <button id="generate" class="btn btn-primary">Genera</button>
+      <button id="cancel" class="btn btn-secondary">Annulla</button>
+    </div>
+
+
+    <div class="mt-5">
+      <p>Salve signor <strong id="page-username"></strong></p>
+      <p>Hai deciso di percorrere <strong id="page-km"></strong></p>
+      <p>Sei un <strong id="page-age"></strong></p>
       <p>Il prezzo non scontato è: <strong id="base-price"></strong><b>€</b></p>
       <p>Il tuo prezzo finale è: <strong id="final-price"></strong><b>€</b></p>
     </div>
