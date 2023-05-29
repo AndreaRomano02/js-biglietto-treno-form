@@ -17,7 +17,7 @@ const pageAge = document.getElementById("page-age");
 const pageCarriege = document.getElementById("carriage");
 const pageCpCode = document.getElementById("cp-code");
 const card = document.getElementById("card");
-let tariff = "Tariffa standard";
+let tariff;
 
 //# Chiedo all'utente le informazioni con gli input nel DOM
 const inputName = document.getElementById("user-name");
@@ -72,6 +72,8 @@ generateBtn.addEventListener("click", function () {
     } else if (age === "over 65") {
       finalPrice = (basePriceKm * discountOver).toFixed(2);
       tariff = "Tariffa over";
+    } else {
+      tariff = "Tariffa standard";
     }
 
     //# Random
