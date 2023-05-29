@@ -1,11 +1,13 @@
-main{
-  height: 100vh;
+header{
+  height: 80px;
+  background-color: red;
 }
-body{
-  background-image: url(../train.jpg);
-  background-size: cover;
-  background-position: center;
+
+.logo{
+  height: 80px;
+  background-color: #fff;
 }
+
 .card{
   border-radius: 50px;
 }

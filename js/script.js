@@ -22,8 +22,6 @@ const inputKm = document.getElementById("user-km");
 const generateBtn = document.getElementById("generate");
 const cancelBtn = document.getElementById("cancel");
 
-console.log(inputKm.value);
-
 generateBtn.addEventListener("click", function () {
   //# Lettura delle variabili di input
   let userName = inputName.value;
