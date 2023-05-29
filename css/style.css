@@ -1,22 +1,60 @@
-header{
-  height: 80px;
-  background-color: red;
+main {
+  background-image: url(../img/train.jpg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
-.logo{
-  height: 80px;
+/*# HEADER */
+header {
+  height: 180px;
+  font-size: 22px;
+}
+
+.logo {
+  height: 120px;
+  width: 100%;
+  margin-bottom: 20px;
   background-color: #fff;
 }
 
-.card{
-  border-radius: 50px;
-}
-.card:hover{
-  box-shadow: 8px 10px 10px rgb(255, 55, 0);
-  cursor: pointer;
+/*# MAIN */
+main {
+  height: calc(100vh - 180px);
 }
 
-.card:active{
-  transform: translate(10px, 10px) scale(0.97);
-  box-shadow: none;
+.card {
+  display: none;
+}
+
+.card.show{
+  display: block;
+}
+
+.card-body {
+  height: 400px;
+}
+
+.card-body .col {
+  border-right: 2px solid lightgray;
+}
+
+.card-body .col:last-child {
+  border: none;
+}
+
+#bar-code {
+  transform: rotate(270deg);
+  width: 300px;
+  position: relative;
+  left: -115px;
+}
+
+.card-body p {
+  font-size: 1.8rem;
+}
+
+.card-body span {
+  font-weight: bold;
+  display: inline-block;
 }
